@@ -101,3 +101,13 @@ const updateProduct = async({ params, request, response }: { params: {id:string}
         }
     }
 }
+
+// @desc    Delete product
+// @route    Delete api/v1/products/:id
+const deleteProduct = ({ params, response }: { params: {id:string}, response : any}) => {
+    products = products.filter(p => p.id !== params.id)
+    response.body = {
+        success: true,
+        msg: 'Product removed'
+    }
+}
