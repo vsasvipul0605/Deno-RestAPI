@@ -111,3 +111,5 @@ const deleteProduct = ({ params, response }: { params: {id:string}, response : a
         msg: 'Product removed'
     }
 }
+
+export { getProducts, getProduct, addProduct, updateProduct, deleteProduct}
