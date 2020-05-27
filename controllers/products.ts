@@ -22,3 +22,12 @@ let products: Product[] = [
         price:15,
     }
 ];
+
+// @desc    Get all products
+// @route    Get api/v1/products
+const getProducts = ({ response }: {response : any}) => {
+    response.body = {
+        success:true,
+        data:products
+    }
+}
